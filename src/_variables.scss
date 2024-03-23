@@ -1,0 +1,25 @@
+// Color Primary
+
+$clr-Orange: #fa740d;
+
+// Color Neutral
+
+$clr-White: hsl(0, 0%, 100%);
+$clr-100gray: #8b919b;
+$clr-400blueGray: #232a3d;
+$clr-500blueGray: #11233b;
+$clr-800darkBlue: #1a1a22;
+$clr-900darkBlue: #121216;
+
+// Gradient
+
+$Gr-card: linear-gradient(to bottom, $clr-500blueGray, $clr-800darkBlue);
+
+//font Weights
+
+$Fw-regular: 400;
+$Fw-bold: 700;
+
+//Font Family
+
+$FontFamily-Primary: 'Overpass', sans-serif;

@@ -1,0 +1,74 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'resets.scss';
+
+body {
+	background-color: $clr-900darkBlue;
+	font-size: 15px;
+	color: white;
+	display: grid;
+	place-content: center;
+	min-height: 100vh;
+	font-family: $FontFamily-Primary;
+}
+.survey {
+	$content-spacing: 1rem;
+	$content-padding: 2rem;
+
+	height: auto;
+	width: 325px;
+	background: $Gr-card;
+	padding: 25px;
+	display: grid;
+	border-radius: 1rem;
+	&__icon {
+		@include flexer();
+		width: 2.7rem;
+		height: 2.7rem;
+		background-color: $clr-400blueGray;
+		border-radius: 50%;
+	}
+	&__title {
+		margin-top: 1rem;
+		font-size: 1.6rem;
+		font-weight: $Fw-regular;
+	}
+	& p {
+		margin: 10px 0 10px 0;
+		color: $clr-100gray;
+		font-size: 0.865rem;
+	}
+	&__score {
+		height: 2.7em;
+		width: 2.7rem;
+		border: 0;
+		color: $clr-100gray;
+		background-color: $clr-400blueGray;
+		border-radius: 50%;
+		&:hover {
+			background-color: $clr-Orange;
+			color: white;
+			cursor: pointer;
+		}
+	}
+	&__submit {
+		background-color: $clr-Orange;
+		border-radius: 2rem;
+		border: none;
+		padding: 0.7rem;
+		color: white;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		&:hover {
+			background-color: $clr-White;
+			color: $clr-Orange;
+			cursor: pointer;
+		}
+	}
+}
+
+.flex-score {
+	margin: 25px 0 25px 0;
+	display: flex;
+	justify-content: space-between;
+}
