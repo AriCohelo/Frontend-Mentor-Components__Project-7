@@ -23,18 +23,24 @@
 				appreciated to help us improve our offering!
 			</p>
 			<div class="flex-score">
-				<button class="survey__score">1</button>
-				<button class="survey__score">2</button>
-				<button class="survey__score">3</button>
-				<button class="survey__score">4</button>
-				<button class="survey__score">5</button>
+				<button data-score="1" class="survey__score">1</button>
+				<button data-score="2" class="survey__score">2</button>
+				<button data-score="3" class="survey__score">3</button>
+				<button data-score="4" class="survey__score">4</button>
+				<button data-score="5" class="survey__score">5</button>
 			</div>
 			<button class="survey__submit survey__submit--active">submit</button>
 		</article>
 
-		<!-- You selected
-		out of 5 Thank you! We appreciate you taking the time to give a rating. If
-		you ever need more support, don’t hesitate to get in touch! -->
+		<article class="survey-result">
+			<img src="../src/images/illustration-thank-you.svg" alt="" />
+			<p class="survey-result__value"></p>
+			<h1 class="survey-result__greeting">Thank you!</h1>
+			<p class="survey-result__content">
+				We appreciate you taking the time to give a rating. If you ever need
+				more support, don’t hesitate to get in touch!
+			</p>
+		</article>
 
 		<script src="bundle.js"></script>
 	</body>

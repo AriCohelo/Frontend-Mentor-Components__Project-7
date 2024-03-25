@@ -12,9 +12,6 @@ body {
 	font-family: $FontFamily-Primary;
 }
 .survey {
-	$content-spacing: 1rem;
-	$content-padding: 2rem;
-
 	height: auto;
 	width: 325px;
 	background: $Gr-card;
@@ -36,7 +33,7 @@ body {
 	& p {
 		margin: 10px 0 10px 0;
 		color: $clr-100gray;
-		font-size: 0.865rem;
+		font-size: $Fs-Paragraph;
 	}
 	&__score {
 		height: 2.7em;
@@ -49,6 +46,10 @@ body {
 			background-color: $clr-Orange;
 			color: white;
 			cursor: pointer;
+		}
+		&--active {
+			background-color: $clr-100gray;
+			color: white;
 		}
 	}
 	&__submit {
@@ -70,5 +71,70 @@ body {
 .flex-score {
 	margin: 25px 0 25px 0;
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
+}
+
+.survey-result {
+	@include flexer(column, center, center);
+	display: none;
+	height: auto;
+	width: 325px;
+	background: $Gr-card;
+	padding: 25px;
+	border-radius: 1rem;
+	& img {
+		padding: 0.5rem;
+	}
+	&__value {
+		@include flexer();
+		height: 2rem;
+		margin: 1rem;
+		padding: 1rem;
+		font-size: $Fs-Paragraph;
+		background-color: $clr-400blueGray;
+		border-radius: 1rem;
+		color: $clr-Orange;
+	}
+	&__greeting {
+		font-size: 1.6rem;
+		font-weight: $Fw-regular;
+		margin: 0.3rem;
+	}
+	&__content {
+		padding: 0.5rem;
+		font-size: $Fs-Paragraph;
+		color: $clr-100gray;
+		text-align: center;
+	}
+}
+
+@media (min-width: 410px) {
+	.survey {
+		width: 410px;
+		padding: 30px;
+		border-radius: 2rem;
+		&__score {
+			height: 3.2rem;
+			width: 3.2rem;
+			margin-bottom: 0.5rem;
+		}
+		&__title {
+			margin-top: 2rem;
+		}
+	}
+	.survey-result {
+		width: 410px;
+		padding: 35px 18px 35px 18px;
+		border-radius: 2rem;
+		gap: 0.5rem;
+		&__value {
+			font-size: 0.9rem;
+			padding: 1.2;
+		}
+		&__content {
+			// margin-top: 1rem;
+			font-size: 1rem;
+		}
+	}
 }
